@@ -1,0 +1,3 @@
+- workload=default
+- ++workload.workflow.generate_data=True
+- ++workload.workflow.train=False
