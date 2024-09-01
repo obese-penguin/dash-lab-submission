@@ -10,4 +10,6 @@ Run `main.py` by setting `export GROQ_API_KEY` to your API Key.
 
 ## Level 2
 
-Extremely stupid and barebones server for L2. L2/main.py reads from a POST request and calls a modified version of L1/main.py. To use it, run L2/main.py, and on a separate terminal send a POST request using cURL to http://localhost:8000 like this: `curl http://localhost:8000 -X POST -d '{"inputs": <your-query-here>, "auth": <groq-api-key-here>}'`. To capture the output of cURL, one can put `>> output.json` at the end of the command, provided `output.json` is empty.  
+Extremely stupid and barebones server for L2. L2/main.py reads from a POST request and calls a modified version of L1/main.py. To use it, run L2/main.py, and on a separate terminal send a POST request using cURL to http://localhost:8000 like this: `curl http://localhost:8000 -X POST -d '{"inputs": <your-query-here>, "auth": <groq-api-key-here>}'`. To capture the output of cURL, one can put `>> output.json` at the end of the command, provided `output.json` is empty. 
+
+Added a `client.sh` script to do the same. 

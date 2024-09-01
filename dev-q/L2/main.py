@@ -1,4 +1,4 @@
-import socket, json, requests
+import socket, json, requests, ast
 import api_request
 
 SERVER_HOST = '0.0.0.0'
@@ -19,8 +19,8 @@ while True:
     client_connection, client_address = server_socket.accept()
 
     req = client_connection.recv(1024).decode()
-
-    data = json.loads(req.split("\n")[-1])
+    data = ast.literal_eval(req.split("\n")[-1])
+    # data = json.loads(req.split("\n")[-1])
     query = data["inputs"]
     AUTH = data["auth"]
     
